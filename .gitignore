@@ -1,0 +1,4 @@
+*.pyc
+__pycache__
+dist
+mergedict.egg-info
