@@ -2,7 +2,7 @@
 
 # The MIT License
 
-# Copyright (c) 2008-2013 Eduardo Naufel Schettino
+# Copyright (c) 2013 Eduardo Naufel Schettino
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-__version__ = (0, 1, 0)
+__version__ = (0, 1, 1)
 
 from singledispatch import singledispatch
 

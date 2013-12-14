@@ -14,7 +14,7 @@ with codecs.open(
 
 setup (
     name = 'mergedict',
-    version = '0.1.0',
+    version = '0.1.1',
     author = 'Eduardo Naufel Schettino',
     author_email = 'schettino72@gmail.com',
     description = 'A Python `dict` with a merge() method.',
