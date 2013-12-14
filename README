@@ -17,14 +17,15 @@ on the type of an item value.
     from mergedict import MergeDict
 
     class SumDict(MergeDict):
-          @MergeDict.dispacth(int)
+          @MergeDict.dispatch(int)
           def merge_int(this, other):
               return this + other
 
-    d2 = MergeDict({'a': 1, 'b': 'one'})
+    d2 = SumDict({'a': 1, 'b': 'one'})
     d2.merge({'a':2, 'b': 'two'})
 
     assert d2 == {'a': 3, 'b': 'two'}
+
 
 mergedict module comes with a ConfigDict that will extend/update
 lists/sets/dicts.
@@ -35,6 +36,7 @@ lists/sets/dicts.
     d3.merge({'a':2, 'my_list': [3, 4]})
 
     assert d3 == {'a': 2, 'my_list': [1, 2, 3, 4]}
+
 
 Project Details
 ===============

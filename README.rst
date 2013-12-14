@@ -23,11 +23,11 @@ based on the type of an item value.
     from mergedict import MergeDict
 
     class SumDict(MergeDict):
-          @MergeDict.dispacth(int)
+          @MergeDict.dispatch(int)
           def merge_int(this, other):
               return this + other
 
-    d2 = MergeDict({'a': 1, 'b': 'one'})
+    d2 = SumDict({'a': 1, 'b': 'one'})
     d2.merge({'a':2, 'b': 'two'})
 
     assert d2 == {'a': 3, 'b': 'two'}
