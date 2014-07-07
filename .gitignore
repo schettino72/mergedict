@@ -1,5 +1,6 @@
 *.pyc
 __pycache__
+.doit.db*
 dist
 mergedict.egg-info
 MANIFEST
