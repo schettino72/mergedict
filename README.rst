@@ -74,7 +74,7 @@ install
 
 ::
 
- $ pip install pyterm
+ $ pip install mergedict
 
 or download and::
 
@@ -88,11 +88,3 @@ To run the tests::
 
   $ py.test
 
-
-CHANGES
-==========
-
-0.1.0 *2013-12-15*
--------------------
-
-- initial release

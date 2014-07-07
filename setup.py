@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 import codecs
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with codecs.open(
     os.path.join(os.path.dirname(__file__), 'README.rst'), 'r', 'utf8',
@@ -14,7 +13,7 @@ with codecs.open(
 
 setup (
     name = 'mergedict',
-    version = '0.1.1',
+    version = '0.1.2',
     author = 'Eduardo Naufel Schettino',
     author_email = 'schettino72@gmail.com',
     description = 'A Python `dict` with a merge() method.',
@@ -38,6 +37,7 @@ setup (
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ]
