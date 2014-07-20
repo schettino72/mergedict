@@ -22,6 +22,22 @@ class TestMergeDict():
         assert d2 == {'a': 2, 'b': 'one', 'c': [2]}
 
 
+    def test_hierarchy(self):
+        class SumDict(MergeDict):
+            @MergeDict.dispatch(int)
+            def merge_int(this, other):
+                return this + other
+
+        class ConcatDict(SumDict):
+            @MergeDict.dispatch(str)
+            def merge_str(this, other):
+                return this + other
+
+        d1 = ConcatDict({'a': 1, 'b': 'one', 'c': [1]})
+        d1.merge({'a':2, 'b': '-two'})
+        assert d1 == {'a': 3, 'b': 'one-two', 'c': [1]}
+
+
 
 def test_ConfigDict():
     d1 = ConfigDict({

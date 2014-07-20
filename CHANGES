@@ -2,6 +2,11 @@
 Changes
 =======
 
+0.2.0
+======
+
+ - Fix for dispatch methods defined in a hierarchy
+
 0.1.2 (2014-07-07)
 ======================
 

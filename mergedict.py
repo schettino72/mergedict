@@ -22,8 +22,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-__version__ = (0, 1, 2)
+__version__ = (0, 2, 'dev0')
 
+import inspect
 from singledispatch import singledispatch
 
 
@@ -37,7 +38,7 @@ class MergeDict(dict):
         super(MergeDict, self).__init__(*args, **kwargs)
         # register singlesingle dispatch methods
         self.merge_value = singledispatch(self.merge_value)
-        for val in self.__class__.__dict__.values():
+        for name, val in inspect.getmembers(self.__class__, inspect.isfunction):
             _type = getattr(val, 'merge_dispatch', None)
             if _type:
                 self.merge_value.register(_type, val)
