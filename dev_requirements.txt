@@ -1,0 +1,8 @@
+# modules required for development only
+# $ pip install --requirement dev_requirements.txt
+
+pyflakes
+pytest
+coverage
+doit
+doit-py

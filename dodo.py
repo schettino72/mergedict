@@ -1,4 +1,27 @@
-DOIT_CONFIG = {'default_tasks': []}
+from doitpy.pyflakes import Pyflakes
+
+
+DOIT_CONFIG = {'default_tasks': ['pyflakes', 'test']}
+
+
+def task_pyflakes():
+    yield Pyflakes().tasks('*.py')
+
+def task_test():
+    return {
+        'actions': ['py.test'],
+        'file_dep': ['mergedict.py', 'test_mergedict.py'],
+        }
+
+def task_coverage():
+    return {
+        'actions': [
+            'coverage run `which py.test`',
+            'coverage report -m --include=mergedict.py,test_mergedict.py'],
+        'verbosity': 2,
+        }
+
+
 
 
 def task_manifest():

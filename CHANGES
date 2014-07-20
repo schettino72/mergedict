@@ -6,6 +6,8 @@ Changes
 ======
 
  - Fix for dispatch methods defined in a hierarchy
+ - drop support for python 2.6
+ - drop support for python 3.2
 
 0.1.2 (2014-07-07)
 ======================
