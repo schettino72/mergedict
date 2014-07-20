@@ -24,6 +24,7 @@
 
 __version__ = (0, 2, 'dev0')
 
+import sys
 import inspect
 from singledispatch import singledispatch
 
@@ -38,10 +39,22 @@ class MergeDict(dict):
         super(MergeDict, self).__init__(*args, **kwargs)
         # register singlesingle dispatch methods
         self.merge_value = singledispatch(self.merge_value)
+
+        # python 2 version
+        if sys.version_info[0] < 3: # pragma: no cover
+            for name, val in inspect.getmembers(self.__class__):
+                _type = getattr(val, 'merge_dispatch', None)
+                if _type:
+                    self.merge_value.register(_type, val.__func__)
+            return
+
+        # python 3 version
         for name, val in inspect.getmembers(self.__class__, inspect.isfunction):
             _type = getattr(val, 'merge_dispatch', None)
             if _type:
                 self.merge_value.register(_type, val)
+
+
 
     def merge(self, other):
         """merge other dict into self"""
