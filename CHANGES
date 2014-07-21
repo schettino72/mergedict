@@ -2,8 +2,8 @@
 Changes
 =======
 
-0.2.0
-======
+0.2.0 (2014-07-21)
+=====================
 
  - merge() implements same signature as dict.update()
  - Fix for dispatch methods defined in a hierarchy
