@@ -1,6 +1,15 @@
 mergedict - A Python `dict` with a merge() method
 ===================================================
 
+.. display some badges
+
+.. image:: https://travis-ci.org/schettino72/mergedict.png?branch=master
+  :target: https://travis-ci.org/schettino72/mergedict
+
+.. image:: https://coveralls.io/repos/schettino72/mergedict/badge.png
+        :target: https://coveralls.io/r/schettino72/mergedict
+
+
 A MergeDict is a `dict` with a `merge()` method.
 `merge()` is like `dict.update()`...
 

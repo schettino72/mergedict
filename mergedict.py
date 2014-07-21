@@ -56,15 +56,25 @@ class MergeDict(dict):
 
 
 
-    def merge(self, other):
+    def merge(self, *args, **kwargs):
         """merge other dict into self"""
         class Sentinel: pass
+
+        if args:
+            if len(args) > 1:
+                msg = "merge() expected at most 1 arguments, got {}."
+                raise TypeError(msg.format(len(args)))
+            other = args[0]
+        else:
+            other = kwargs
+
         for key, other_value in other.items():
             this_value = self.get(key, Sentinel)
             if this_value is Sentinel:
                 self[key] = other_value
             else:
                 self[key] = self.merge_value(this_value, other_value)
+
 
     class dispatch:
         """decorator to mark methods as single dispatch functions."""

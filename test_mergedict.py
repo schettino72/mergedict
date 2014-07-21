@@ -1,5 +1,8 @@
 from mergedict import MergeDict, ConfigDict
 
+import pytest
+
+
 class TestMergeDict():
     def test_default_merge_is_like_update(self):
         d1 = MergeDict({'a': 1, 'b': 'one', 'c': [1]})
@@ -36,6 +39,16 @@ class TestMergeDict():
         d1 = ConcatDict({'a': 1, 'b': 'one', 'c': [1]})
         d1.merge({'a':2, 'b': '-two'})
         assert d1 == {'a': 3, 'b': 'one-two', 'c': [1]}
+
+
+    def test_update_error_two_args(self):
+        config = MergeDict({'foo': 'bar'})
+        pytest.raises(TypeError, config.merge, {'foo': 'baz'}, {'foo': 'baz2'})
+
+    def test_merge_keyword(self):
+        config = MergeDict({'foo': 'bar'})
+        config.merge(foo='baz')
+        assert config['foo'] == 'baz'
 
 
 
