@@ -12,7 +12,7 @@ branches:
     - test
 
 install:
-  - pip install . --use-mirrors
+  - pip install .
   - pip install -r dev_requirements.txt
   - pip install python-coveralls
 
