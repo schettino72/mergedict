@@ -16,7 +16,7 @@ def task_test():
 def task_coverage():
     return {
         'actions': [
-            'coverage run --source=mergedict.py,test_mergedict.py `which py.test`',
+            'coverage run --source=mergedict,test_mergedict `which py.test`',
             'coverage report --show-missing'],
         'verbosity': 2,
         }
