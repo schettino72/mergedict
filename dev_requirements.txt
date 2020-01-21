@@ -4,5 +4,6 @@
 pyflakes
 pytest
 coverage
-doit
+doit<0.30; python_version<'3'
+doit>=0.30; python_version>='3'
 doit-py
