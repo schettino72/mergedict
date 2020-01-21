@@ -21,10 +21,10 @@ install:
 
 script:
   - doit --continue
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.3' ]]; then doit coverage; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then doit coverage; fi
 
 after_success:
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.3' ]]; then coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then coveralls; fi
 
 
 notifications:
