@@ -8,6 +8,7 @@ Changes
  - drop support for python 3.3 and 3.4
  - add support for python 3.5, 3.6, 3.7 and 3.8
 
+
 0.2.0 (2014-07-21)
 =====================
 
@@ -16,10 +17,12 @@ Changes
  - drop support for python 2.6
  - drop support for python 3.2
 
+
 0.1.2 (2014-07-07)
 ======================
 
  - Fix #1 Can not install fom PyPi
+
 
 0.1.1 (2013-12-15)
 ======================
