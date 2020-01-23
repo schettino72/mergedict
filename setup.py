@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
 import os
 import codecs
 from setuptools import setup
@@ -12,9 +11,9 @@ with codecs.open(
     long_description = ld_file.read()
 
 
-install_requires = []
-if sys.version_info[0] < 3 or sys.version_info[1] < 4:
-    install_requires.append('singledispatch')
+install_requires = [
+    'singledispatch; python_version<"3.4"',
+]
 
 setup (
     name = 'mergedict',
