@@ -75,7 +75,9 @@ see LICENSE file
 developers / contributors
 ==========================
 
-- Eduardo Naufel Schettino
+- Eduardo Naufel Schettino — main author
+
+- Sebastian Pipping — build system fixes
 
 
 install
