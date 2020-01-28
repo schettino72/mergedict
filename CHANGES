@@ -2,7 +2,7 @@
 Changes
 =======
 
-?.?.? (????-??-??)
+0.3.0 (2020-01-28)
 =====================
 
  - No longer depend on singledispatch for Python 3.4 and after

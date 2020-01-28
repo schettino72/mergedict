@@ -17,7 +17,7 @@ install_requires = [
 
 setup (
     name = 'mergedict',
-    version = '0.2.0',
+    version = '0.3.0',
     author = 'Eduardo Naufel Schettino',
     author_email = 'schettino72@gmail.com',
     description = 'A Python `dict` with a merge() method.',
