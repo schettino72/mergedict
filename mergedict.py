@@ -26,11 +26,7 @@ __version__ = (0, 3, 0)
 
 import sys
 import inspect
-try:
-    from functools import singledispatch
-# singledispatch was added on python 3.4
-except ImportError: # pragma: no cover
-    from singledispatch import singledispatch
+from functools import singledispatch
 
 class MergeDict(dict):
     """Base class for a dict that implements a merge() method.
