@@ -13,7 +13,7 @@ with codecs.open(
 
 setup (
     name = 'mergedict',
-    version = '0.3.0',
+    version = '1.0.0',
     author = 'Eduardo Naufel Schettino',
     author_email = 'schettino72@gmail.com',
     description = 'A Python `dict` with a merge() method.',
