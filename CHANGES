@@ -6,7 +6,6 @@ Changes
 =====================
 
  - No longer depend on singledispatch for Python 3.4 and after
- - Drop support for Python 3.3 and 3.4
  - Add support for Python 3.5, 3.6, 3.7 and 3.8
 
 
